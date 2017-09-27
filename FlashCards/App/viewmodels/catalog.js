@@ -1,4 +1,4 @@
-﻿define(['durandal/system', 'services/flashCardService'], function (system, service) {
+﻿define(['durandal/system', 'services/flashCardService', 'plugins/router'], function (system, service, router) {
     var vm = {};
 
     var calaogNames = [];
@@ -21,6 +21,7 @@
 
     vm.goToCards = function (name) {
         system.log('Go To ' + name);
+        router.navigate('#cards/' + encodeURIComponent(name));
     };
 
     return vm;
