@@ -7,7 +7,7 @@
         system.log('** activate catalog');
         return service.catalogNames()
             .done(function (data) {
-                vm.calaogNames = data;
+                vm.catalogNames = data;
             });
     };
 
@@ -17,6 +17,10 @@
 
     vm.canDeactivate = function () {
         return true;
+    };
+
+    vm.goToCards = function (name) {
+        system.log('Go To ' + name);
     };
 
     return vm;
