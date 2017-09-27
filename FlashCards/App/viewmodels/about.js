@@ -9,10 +9,6 @@
         system.log('** attached about');
     };
 
-    vm.canActivate = function () {
-        return { redirect: '#catalog' };
-    }
-
     return vm;
 
 });
