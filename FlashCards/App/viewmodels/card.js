@@ -11,5 +11,9 @@
         selectedCards.setIndex(vm.indexParam);
     };
 
+    vm.flip = function () {
+        $('.card').toggleClass('flip');
+    };
+
     return vm;
 });
