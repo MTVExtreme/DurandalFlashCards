@@ -1,4 +1,4 @@
-﻿define(['plugins/router'], function(router) {
+﻿define(['durandal/app', 'plugins/router'], function(app, router) {
    return {
       router: router,
       activate: function() {
@@ -12,5 +12,10 @@
 
          return router.activate();
       },
+      randomChecked: false,
+      randomChanged: function () {
+          app.trigger('randomChanged', this.randomChecked);
+          return true;
+      }
    };
 });
